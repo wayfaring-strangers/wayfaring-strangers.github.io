@@ -1,0 +1,57 @@
+.contact {
+    @include main-image('/images/contact/customs-house.jpg');
+}
+
+.contact-header {
+    color: white;
+    font-size: 4em;
+
+    @include max-media-query($mobile-large) {
+        font-size: 2em;
+    }
+}
+
+.contact-wrapper {
+    position: relative;
+    top: 30%;
+    left: 15%;
+
+    @include max-media-query($mobile-large) {
+        left: 5%;
+    }
+}
+
+.contact-content {
+    background: rgba(248,248,255,0.8);
+    color: $black;
+    display: inline-block;
+    padding: $spacing-unit * 2;
+    max-width: 350px;
+    margin-top: $spacing-unit * 4;
+
+    @include max-media-query($mobile-large) {
+        margin-top: $spacing-unit;
+    }
+}
+
+.contact-info-header {
+    font-family: $cursive-font;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.contact-info {
+    font-weight: 600;
+    margin-top: $spacing-unit;
+}
+
+.contact-col {
+    @extend .col-md-6;
+
+    &:first-child {
+        @include min-media-query($tablet-large) {
+            border-right: 1px solid $black;
+        }
+    }
+}

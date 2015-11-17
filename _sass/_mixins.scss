@@ -1,0 +1,27 @@
+@mixin hamburger($bg) {
+  width: 49px;
+  height: 30px;
+  top: 20px;
+  left: 10px;
+  background: url($bg);
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+
+  @include max-media-query($tablet-large) {
+    top: -45px;
+    left: 150px;
+  }
+}
+
+@mixin main-image($path) {
+  background: url($path) no-repeat center center;
+  background-size: cover;
+}
+
+@mixin header-style($color) {
+  display: inline-block;
+  color: $color;
+  border: 4px solid $color;
+  padding: $spacing-unit
+}

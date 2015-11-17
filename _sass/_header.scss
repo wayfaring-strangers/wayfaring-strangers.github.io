@@ -1,0 +1,129 @@
+.site-header {
+    height: $header-height;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: $z-index-header;
+}
+
+.logo-wrapper {
+    @extend .col-md-2;
+    @extend .col-xs-3;
+    padding-left: 0;
+    min-width: 150px;
+
+    img {
+        max-height: 100%;
+
+        @include max-media-query($tablet-large) {
+            height: $header-height - $spacing-unit * 2;
+        }
+    }
+}
+
+.site-menu {
+    @extend .col-md-10;
+    @extend .col-xs-9;
+    height: $header-height;
+    padding: 0;
+
+    @include max-media-query($tablet-large) {
+        height: auto;
+        width: 100%;
+        margin-top: 0;
+  }
+}
+
+.hamburger {
+    @include hamburger('../images/hamburger.png');
+    z-index: $z-index-header;
+
+
+    &:hover {
+      @include hamburger('../images/burgerHover.png');
+      background-size: cover;
+    }
+}
+
+.hamburgerx {
+  @include hamburger('../images/hamburgerX.png');
+  z-index: $z-index-header;
+  cursor: pointer;
+  display: none;
+
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+  transform-origin: center;
+
+  &:hover {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.menu-close {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.menu-open {
+  height: $header-height - 1;
+  opacity: 1;
+}
+
+.header-menu {
+    background: $black;
+    width: 100%;
+    margin-left: $spacing-unit * 3;
+
+    ul {
+        list-style: none;
+        -webkit-padding-start: $spacing-unit;
+        -webkit-margin-before: 0;
+        padding-bottom: $spacing-unit;
+
+        li {
+            display: inline-block;
+            padding-top: $spacing-unit * 2;
+            padding-left: $spacing-unit * 3;
+            font-size: 1.5em;
+
+            @include max-media-query($tablet-large) {
+                display: block;
+                padding-left: 0;
+                font-size: 1em;
+            }
+
+            @include max-media-query($desktop-small) {
+                font-size: 1.25em;
+            }
+
+            a {
+                color: $yellow;
+                opacity: 1;
+                text-decoration: none;
+
+                @include max-media-query($tablet-large) {
+                    padding-top: $spacing-unit * 1.5;
+                }
+
+               &:hover {
+                   opacity: 0.8;
+               }
+            }
+        }
+    }
+
+    @include max-media-query($tablet-large) {
+        width: 130px;
+        height: auto;
+        margin-left: 0;
+    }
+}

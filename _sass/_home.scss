@@ -1,0 +1,28 @@
+.homepage {
+    @include main-image('/images/home/background.jpg');
+    background-position: left;
+}
+
+.home-mission {
+    color: white;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    display: inline-block;
+    left: 13%;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px;
+    font-size: 1.5em;
+
+    span {
+        display: block;
+        font-family: $cursive-font;
+        font-style: italic
+    }
+
+    @include max-media-query($mobile-large) {
+        left: $spacing-unit;
+        font-size: 1.2em;
+        top: 250px
+    }
+}

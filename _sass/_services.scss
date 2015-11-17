@@ -1,0 +1,85 @@
+.services {
+    @include main-image('../images/services/services-bg.jpg');
+    text-align: center;
+    position: relative
+}
+
+.services-header {
+    font-size: 4em;
+    color: $light-grey;
+    margin-top: $spacing-unit * 12;
+    margin-bottom: $spacing-unit * 3;
+
+    @include max-media-query($tablet-large) {
+        margin-top: $spacing-unit * 7;
+    }
+}
+
+.services-right-col {
+    @extend .col-md-5;
+}
+
+.services-left-col {
+    @extend .col-md-5;
+    @extend .col-md-offset-1;
+
+    border-right: 1px dotted black;
+
+    img {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.services-content-wrapper {
+    margin-top: 10%;
+}
+
+.services-read-more {
+    display: inline-block;
+    padding: 1px 6px;
+    border: 1px solid $light-grey;
+    margin-top: $spacing-unit * 2;
+    cursor: pointer;
+}
+
+.services-more {
+    color: $light-grey;
+}
+
+.read-more-ico {
+    color: $light-grey;
+    padding-left: $spacing-unit * 2;
+}
+
+.in-house-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    color: $yellow;
+    background: $black;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.in-house-cap {
+    display: none;
+    transition-delay: 0s;
+    position: absolute;
+    width: 60%;
+    margin: 10% 20%;
+    padding: 2%;
+    top: 0;
+    background: $yellow;
+    color: white;
+    list-style-color: black;
+    text-align: left;
+
+    @media screen and (max-width: 600px) {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        bottom: 0;
+    }
+}

@@ -1,0 +1,54 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$header-height:    80px;
+$yellow:           #DBCA00;
+$black:            #1E120D;
+$light-yellow:     #FFEB00;
+$grey:             #DDDCE2;
+$contact-yellow:   #EEFF2D;
+$dark-grey:        #758895;
+$light-grey:       #88858B;
+$pink:             #E15888;
+$cursive-font:     'PT serif', serif;
+$main-font:        'Karla', sans-serif;
+$spacing-unit:     10px;
+
+//z-index
+$z-index-decoration: 10;
+$z-index-header: 99;
+
+//devices
+$desktop-small: 1000px;
+$tablet-large: 850px;
+$tablet-small: 700px;
+$mobile-large: 500px;
+
+@mixin max-media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin min-media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "bootstrap",
+        "layout",
+        "base",
+        "syntax-highlighting",
+        "mixins",
+        "home",
+        "header",
+        "about",
+        "pov",
+        "approach",
+        "contact",
+        "services";

@@ -1,0 +1,151 @@
+
+body {
+  font-family: $main-font;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.page {
+  overflow: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, .site-header a {
+  font-family: $main-font;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1.05em;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.25em;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
+h4 {
+  font-size: 1.125em;
+  line-height: 1.222222222em;
+}
+
+@include max-media-query($tablet-large) {
+  h1 {
+    font-size: 2.5em;
+    line-height: 1.125em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.222222222em;
+  }
+}
+
+@include max-media-query($mobile-large) {
+  body {
+    line-height: 1.25em;
+  }
+
+  h1 {
+    font-size: 2em;
+    line-height: 1.25em;
+  }
+
+  h2 {
+    font-size: 1.625em;
+    line-height: 1.15384615em;
+  }
+
+  h3 {
+    font-size: 1.375em;
+    line-height: 1.1363634em;
+  }
+
+  h4 {
+    font-size: 1.125em;
+    line-height: 1.111111em;
+  }
+}
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+
+.scroll-arrow {
+    background: url('/images/down-arrow.png') no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 100px;
+    z-index: $z-index-decoration;
+    position: absolute;
+    bottom: 0px;
+    left: 5%;
+
+    @include max-media-query($tablet-large) {
+        display: none;
+    }
+}
+
+.cursive-font {
+   font-family: $cursive-font;
+}
+
+.bold-font {
+    font-weight: 700;
+}
+
+.hide-small {
+    @include max-media-query($tablet-small) {
+        display: none;
+    }
+}
+
+.header-style {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+.scroll-arrow {
+    background: url('/images/arrow.png') no-repeat;
+    background-size: contain;
+    height: 70px;
+    width: 100px;
+    z-index: 999px;
+    position: absolute;
+    bottom: 0px;
+    left: 5%;
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+}

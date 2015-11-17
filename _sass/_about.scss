@@ -1,0 +1,39 @@
+.about {
+    background: white;
+    position: relative;
+}
+
+.about-content {
+    @extend .col-md-6;
+    @extend .col-md-offset-3;
+
+    margin-top: $spacing-unit * 12;
+
+    @include max-media-query($tablet-large) {
+        margin-top: $spacing-unit * 7;
+    }
+
+
+    h3 {
+        font-family: $cursive-font;
+        font-style: italic;
+        font-weight: 400;
+        margin-left: 60px;
+        @media screen and (max-width: 1000px){
+        margin-left: 30px;
+        }
+    }
+}
+
+.about-content-box {
+    background: $yellow;
+    padding: $spacing-unit * 2;
+    color: white;
+    font-weight: 700;
+    margin-bottom: $spacing-unit * 4;
+    margin-top: $spacing-unit * 2;
+
+    @include max-media-query($tablet-large) {
+        margin-top: $spacing-unit * 2;
+    }
+}
