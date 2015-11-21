@@ -35,8 +35,9 @@
 }
 
 .hamburger {
-    @include hamburger('../images/hamburger.png');
+    @include hamburger('../images/BurgerNew.png');
     z-index: $z-index-header;
+    background-size: cover;
 
 
     &:hover {
