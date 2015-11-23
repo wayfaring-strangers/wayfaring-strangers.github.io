@@ -1,17 +1,19 @@
 @mixin hamburger($bg) {
-  width: 49px;
-  height: 30px;
-  top: 20px;
-  left: 10px;
-  background: url($bg);
-  background-repeat: no-repeat;
-  position: absolute;
-  cursor: pointer;
+    width: 49px;
+    height: 30px;
+    top: 25px;
+    left: 10px;
+    background: url($bg);
+    background-repeat: no-repeat;
+    position: absolute;
+    cursor: pointer;
+    background-size: cover;
+    z-index: $z-index-header;
 
-  @include max-media-query($tablet-large) {
-    top: -45px;
-    left: 150px;
-  }
+    @include max-media-query($tablet-large) {
+        top: -45px;
+        left: 150px;
+    }
 }
 
 @mixin main-image($path) {

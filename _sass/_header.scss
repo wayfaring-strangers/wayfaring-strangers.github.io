@@ -37,19 +37,16 @@
 .hamburger {
     @include hamburger('../images/BurgerNew.png');
     z-index: $z-index-header;
-    background-size: cover;
 
 
     &:hover {
       @include hamburger('../images/burgerHover.png');
-      background-size: cover;
     }
 }
 
 .hamburgerx {
-    @include hamburger('../images/hamburgerX.png');
+    @include hamburger('../images/BurgerX.png');
     z-index: $z-index-header;
-    cursor: pointer;
     display: none;
 
     -webkit-transition: -webkit-transform .8s ease-in-out;
@@ -93,7 +90,7 @@
         li {
             display: inline-block;
             padding-top: $spacing-unit * 2;
-            padding-left: $spacing-unit * 3;
+            padding-left: $spacing-unit * 2;
             font-size: 1.5em;
 
             @include max-media-query($tablet-large) {
