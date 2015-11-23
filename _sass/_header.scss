@@ -8,7 +8,7 @@
 
 .logo-wrapper {
     @extend .col-md-2;
-    @extend .col-xs-3;
+
     padding-left: 0;
     min-width: 150px;
 
@@ -28,7 +28,6 @@
     padding: 0;
 
     @include max-media-query($tablet-large) {
-        height: auto;
         width: 100%;
         margin-top: 0;
   }
@@ -98,12 +97,10 @@
 
             @include max-media-query($tablet-large) {
                 display: block;
-                padding-left: 0;
-                font-size: 1em;
-            }
-
-            @include max-media-query($desktop-small) {
-                font-size: 1.25em;
+                text-align: center;
+                font-weight: 700;
+                font-size: 2em;
+                padding-top: $spacing-unit * 3;
             }
 
             a {
@@ -113,6 +110,11 @@
 
                 @include max-media-query($tablet-large) {
                     padding-top: $spacing-unit * 1.5;
+                    color: $header-d-grey;
+
+                    &:hover {
+                        color: $header-l-grey;
+                    }
                 }
 
                &:hover {
@@ -123,8 +125,29 @@
     }
 
     @include max-media-query($tablet-large) {
-        width: 130px;
-        height: auto;
         margin-left: 0;
+        margin-top: -1;
     }
+}
+
+.mobile-menu-block {
+    @include max-media-query($tablet-large) {
+        position: absolute;
+        height: 60px;
+        position: absolute;
+        height: 60px;
+        width: 100%;
+        background: black;
+        opacity: 0;
+
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+}
+
+.mobile-block-show {
+    opacity: 1;
 }
