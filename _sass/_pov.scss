@@ -2,9 +2,9 @@
     @include main-image('/images/pov/POVDesktop.jpg');
     position: relative;
 
-    @include max-media-query($tablet-large) {
-        @include main-image('/images/pov/POVbackgroundtall.png');
-    }
+    // @include max-media-query($tablet-large) {
+    //     @include main-image('/images/pov/POVbackgroundtall.png');
+    // }
 }
 
 .pov-quote {
