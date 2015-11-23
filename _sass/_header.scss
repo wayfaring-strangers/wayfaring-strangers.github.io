@@ -8,6 +8,7 @@
 
 .logo-wrapper {
     @extend .col-md-2;
+    @extend .col-xs-3;
 
     padding-left: 0;
     min-width: 150px;
@@ -46,36 +47,36 @@
 }
 
 .hamburgerx {
-  @include hamburger('../images/hamburgerX.png');
-  z-index: $z-index-header;
-  cursor: pointer;
-  display: none;
+    @include hamburger('../images/hamburgerX.png');
+    z-index: $z-index-header;
+    cursor: pointer;
+    display: none;
 
-  -webkit-transition: -webkit-transform .8s ease-in-out;
-  transition: transform .8s ease-in-out;
-  transform-origin: center;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    transform-origin: center;
 
-  &:hover {
+    &:hover {
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
-  }
+    }
 }
 
 .menu-close {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .menu-open {
-  height: $header-height - 1;
-  opacity: 1;
+    height: $header-height - 1;
+    opacity: 1;
 }
 
 .header-menu {
@@ -99,8 +100,9 @@
                 display: block;
                 text-align: center;
                 font-weight: 700;
-                font-size: 2em;
-                padding-top: $spacing-unit * 3;
+                font-size: 2.5em;
+                padding-top: $spacing-unit * 4;
+                padding-left: 0;
             }
 
             a {
@@ -112,7 +114,9 @@
                     padding-top: $spacing-unit * 1.5;
                     color: $header-d-grey;
 
-                    &:hover {
+                    &:hover,
+                    &:active
+                     {
                         color: $header-l-grey;
                     }
                 }
@@ -133,9 +137,8 @@
 .mobile-menu-block {
     @include max-media-query($tablet-large) {
         position: absolute;
-        height: 60px;
+        height: 61px;
         position: absolute;
-        height: 60px;
         width: 100%;
         background: black;
         opacity: 0;
