@@ -45,7 +45,7 @@
 }
 
 .hamburgerx {
-    @include hamburger('../images/BurgerX.png');
+    @include hamburger('../images/hamburgerx.png');
     z-index: $z-index-header;
     display: none;
 
