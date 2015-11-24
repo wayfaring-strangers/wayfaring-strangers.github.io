@@ -100,21 +100,6 @@ h4 {
   *zoom: 1;
 }
 
-.scroll-arrow {
-    background: url('/images/down-arrow.png') no-repeat;
-    background-size: contain;
-    height: 70px;
-    width: 100px;
-    z-index: $z-index-decoration;
-    position: absolute;
-    bottom: 0px;
-    left: 5%;
-
-    @include max-media-query($tablet-large) {
-        display: none;
-    }
-}
-
 .cursive-font {
    font-family: $cursive-font;
 }
@@ -138,11 +123,11 @@ h4 {
 .scroll-arrow {
     background: url('/images/arrow.png') no-repeat;
     background-size: contain;
-    height: 70px;
-    width: 100px;
+    height: 20px;
+    width: 50px;
     z-index: 999px;
     position: absolute;
-    bottom: 0px;
+    bottom: $spacing-unit * 2;
     left: 5%;
 
     @media screen and (max-width: 800px) {
