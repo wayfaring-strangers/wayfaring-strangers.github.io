@@ -36,7 +36,6 @@
 
 .hamburger {
     @include hamburger('../images/BurgerNew.png');
-    z-index: $z-index-header;
 
 
     &:hover {
@@ -46,7 +45,6 @@
 
 .hamburgerx {
     @include hamburger('../images/hamburgerx.png');
-    z-index: $z-index-header;
     display: none;
 
     -webkit-transition: -webkit-transform .8s ease-in-out;
@@ -60,9 +58,11 @@
 }
 
 .menu-close {
-    opacity: 0;
-    height: 0;
     overflow: hidden;
+
+    @include max-media-query($tablet-large) {
+        height: 0;
+    }
 
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -72,14 +72,14 @@
 }
 
 .menu-open {
-    height: $header-height - 1;
-    opacity: 1;
+    z-index: 999;
 }
 
 .header-menu {
     background: $black;
     width: 100%;
     margin-left: $spacing-unit * 3;
+    height: 0;
 
     ul {
         list-style: none;
@@ -89,7 +89,7 @@
 
         li {
             display: inline-block;
-            padding-top: $spacing-unit * 2;
+            padding-top: $spacing-unit * 3.5;
             padding-left: $spacing-unit * 2;
             font-size: 1.5em;
 
@@ -132,7 +132,7 @@
         position: absolute;
         width: 100%;
         background: black;
-        opacity: 0;
+        display: none;
 
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;
@@ -140,8 +140,4 @@
         -ms-transition: all 1s ease;
         transition: all 1s ease;
     }
-}
-
-.mobile-block-show {
-    opacity: 1;
 }

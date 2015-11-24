@@ -11,13 +11,9 @@
             'hamburgerX': 'url("../images/burgerX.png")',
         };
 
-
-    $(document).ready(function(){
-        headerHeightMobile();
-    });
-
     hamburger.click(function() {
         OpenMenu();
+        headerHeightMobile();
     });
 
     hamburgerX.click(function () {
@@ -30,22 +26,18 @@
         });
     });
 
-    $(window).resize(function(){
-        headerHeightMobile();
-    });
-
     function OpenMenu() {
         hamburger.fadeOut();
         hamburgerX.fadeIn('fast');
+        menuBlock.fadeIn('fast');
         menu.addClass('menu-open');
-        menuBlock.addClass('mobile-block-show');
     }
 
     function closeMenu() {
         hamburgerX.fadeOut();
         hamburger.fadeIn('fast');
         menu.removeClass('menu-open');
-        menuBlock.removeClass('mobile-block-show');
+        menu.css('height', 0);
     }
 
     function getExtraPixels() {
@@ -59,6 +51,8 @@
     function headerHeightMobile(){
         if(mq.matches) {
             menu.css('height', browserHeight);
+        } else {
+            menu.css('height', '100px');
         }
     }
 })();
