@@ -18,6 +18,11 @@
 
 .services-right-col {
     @extend .col-md-5;
+
+
+    @include max-media-query($mobile-large) {
+        display: none;
+    }
 }
 
 .services-left-col {
