@@ -103,23 +103,17 @@
             }
 
             a {
-                color: $yellow;
+                color: $header-d-grey;
                 opacity: 1;
                 text-decoration: none;
 
                 @include max-media-query($tablet-large) {
                     padding-top: $spacing-unit * 1.5;
                     color: $header-d-grey;
-
-                    &:hover,
-                    &:active
-                     {
-                        color: $header-l-grey;
-                    }
                 }
 
                &:hover {
-                   opacity: 0.8;
+                   color: $header-l-grey;
                }
             }
         }
