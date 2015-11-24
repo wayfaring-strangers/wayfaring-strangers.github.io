@@ -4,7 +4,11 @@
 
 .contact-header {
     color: white;
-    font-size: 4em;
+    font-size: 6em;
+
+    @include max-media-query($tablet-large) {
+        font-size: 4em;
+    }
 
     @include max-media-query($mobile-large) {
         font-size: 2em;
