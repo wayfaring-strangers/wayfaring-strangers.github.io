@@ -5,13 +5,14 @@
 }
 
 .services-header {
-    font-size: 4em;
+    font-size: 6em;
     color: $light-grey;
     margin-top: $spacing-unit * 12;
     margin-bottom: $spacing-unit * 3;
 
     @include max-media-query($tablet-large) {
         margin-top: $spacing-unit * 7;
+        font-size: 4em;
     }
 }
 
@@ -41,6 +42,7 @@
     border: 1px solid $light-grey;
     margin-top: $spacing-unit * 2;
     cursor: pointer;
+    margin-bottom: $spacing-unit * 2;
 }
 
 .services-more {
