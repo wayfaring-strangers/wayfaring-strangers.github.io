@@ -38,9 +38,8 @@
     @extend .col-md-2;
     @extend .col-xs-4;
 
-    padding-top: 60px;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 3.5em;
 
     @include max-media-query($tablet-small) {
         width: 100%;
@@ -48,10 +47,15 @@
         border-bottom: 2px solid black;
         margin-bottom: $spacing-unit * 2;
 
-        h1 {
+        .pov-header-content {
             margin-bottom: $spacing-unit;
+            line-height: 1em;
         }
     }
+}
+
+.pov-header-content {
+    line-height: 3.5em;
 }
 
 .pov-content {
