@@ -35,16 +35,16 @@
 }
 
 .hamburger {
-    @include hamburger('../images/BurgerNew.png');
+    @include hamburger('../images/hamburgerOpen.png');
 
 
     &:hover {
-      @include hamburger('../images/burgerHover.png');
+      @include hamburger('../images/hamburgerRollOver.png');
     }
 }
 
 .hamburgerx {
-    @include hamburger('../images/hamburgerx.png');
+    @include hamburger('../images/hamburgerClose.png');
     display: none;
 
     -webkit-transition: -webkit-transform .8s ease-in-out;
