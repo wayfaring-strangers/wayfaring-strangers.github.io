@@ -4,7 +4,6 @@
     });
 
     $(window).resize(function(){
-        console.log('resize');
         setImageDimensions();
     });
 
