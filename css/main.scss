@@ -25,7 +25,7 @@ $z-index-header: 99;
 //devices
 $desktop-small: 1000px;
 $tablet-large: 860px;
-$tablet-small: 700px;
+$tablet-small: 768px;
 $mobile-large: 500px;
 
 @mixin max-media-query($device) {

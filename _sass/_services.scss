@@ -1,92 +1,171 @@
-.services {
-    @include main-image('../images/services/services-bg.jpg');
-    text-align: center;
-    position: relative
-}
+// .services {
+//     @include main-image('../images/services/services-bg.jpg');
+//     text-align: center;
+//     position: relative
+// }
+//
+// .services-header {
+// }
+//
+// .services-right-col {
+//     @extend .col-md-5;
+//
+//
+//     @include max-media-query($mobile-large) {
+//         display: none;
+//     }
+// }
 
-.services-header {
-    font-size: 6em;
-    color: $light-grey;
-    margin-top: $spacing-unit * 12;
-    margin-bottom: $spacing-unit * 3;
-
-    @include max-media-query($tablet-large) {
-        margin-top: $spacing-unit * 7;
-        font-size: 4em;
-    }
-}
-
-.services-right-col {
-    @extend .col-md-5;
-
-
-    @include max-media-query($mobile-large) {
-        display: none;
-    }
-}
-
-.services-left-col {
-    @extend .col-md-5;
-    @extend .col-md-offset-1;
-
-    border-right: 1px dotted black;
-
-    img {
-        width: 100%;
-        max-width: 250px;
-    }
-}
-
-.services-content-wrapper {
-    margin-top: 10%;
-}
-
+// .services-left-col {
+//     @extend .col-md-5;
+//     @extend .col-md-offset-1;
+//
+//     border-right: 1px dotted black;
+//
+//     img {
+//         width: 100%;
+//         max-width: 250px;
+//     }
+// }
+//
+// .services-content-wrapper {
+//     margin-top: 10%;
+// }
+//
 .services-read-more {
     display: inline-block;
     padding: 1px 6px;
     border: 1px solid $light-grey;
-    margin-top: $spacing-unit * 2;
     cursor: pointer;
-    margin-bottom: $spacing-unit * 2;
-}
-
-.services-more {
-    color: $light-grey;
+    margin-top: 5px;
+    display: none;
 }
 
 .read-more-ico {
     color: $light-grey;
     padding-left: $spacing-unit * 2;
 }
+//
+// .in-house-close {
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     padding: 5px 10px;
+//     color: $yellow;
+//     background: $black;
+//     cursor: pointer;
+//     z-index: 1000;
+// }
+//
+// .in-house-cap {
+//     display: none;
+//     transition-delay: 0s;
+//     position: absolute;
+//     width: 60%;
+//     margin: 10% 20%;
+//     padding: 2%;
+//     top: 0;
+//     background: $yellow;
+//     color: white;
+//     list-style-color: black;
+//     text-align: left;
+//
+//     @media screen and (max-width: 600px) {
+//         position: absolute;
+//         width: 100%;
+//         margin: 0;
+//         bottom: 0;
+//     }
+// }
 
-.in-house-close {
+.services--header-wrapper {
+    vertical-align: middle;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 10px;
-    color: $yellow;
-    background: $black;
-    cursor: pointer;
-    z-index: 1000;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    margin-top: 10%;
+
+    @include max-media-query($tablet-large) {
+        margin-top: 50px;
+    }
 }
 
-.in-house-cap {
-    display: none;
-    transition-delay: 0s;
-    position: absolute;
-    width: 60%;
-    margin: 10% 20%;
-    padding: 2%;
-    top: 0;
-    background: $yellow;
-    color: white;
-    list-style-color: black;
-    text-align: left;
 
-    @media screen and (max-width: 600px) {
-        position: absolute;
-        width: 100%;
-        margin: 0;
-        bottom: 0;
+.services--header {
+    background: $yellow;
+    padding: $spacing-unit;
+    font-size: 3.5em;
+
+    @include max-media-query($tablet-large) {
+        font-size: 2em;
     }
+}
+
+.services--col {
+    @extend .col-md-6;
+
+    height: inherit;
+}
+
+.services--left-col {
+    background: white;
+    padding-top: 20%;
+}
+
+.services--icons {
+    width: 150px;
+    display: inline-block;
+
+    // @include max-media-query($tablet-small) {
+    //     padding-top: 40px;
+    // }
+}
+
+.services--reality-header {
+    font-size: 3.5em;
+    font-weight: 800;
+    line-height: 1em;
+}
+
+.services--reality-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.services--vr,
+.services--ar {
+    @extend .col-xs-6;
+
+    @include max-media-query($mobile-large) {
+        width: 100%;
+        padding-top: 40px;
+        text-align: center;
+    }
+}
+
+.services--bullet-points {
+    @extend .col-md-12;
+
+    margin-top: 20px;
+    list-style-type: square;
+    font-size: 1.2em;
+
+    li {
+        color: $yellow;
+        padding-top: 10px;
+
+        p {
+            color: black;
+        }
+    }
+
+    @include max-media-query($mobile-large) {
+        padding-top: 20px;
+    }
+}
+
+.services--right-col {
+    @include main-image('../images/services/services-bg.jpeg');
 }
