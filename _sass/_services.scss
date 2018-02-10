@@ -38,7 +38,10 @@
     border: 1px solid $light-grey;
     cursor: pointer;
     margin-top: 5px;
-    display: none;
+
+    @include max-media-query($mobile-large) {
+        display: none;
+    }
 }
 
 .read-more-ico {
