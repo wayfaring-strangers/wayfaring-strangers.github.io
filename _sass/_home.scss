@@ -1,6 +1,10 @@
 .homepage {
-    @include main-image('/images/home/background.jpg');
+    @include main-image('/images/home/background.png');
     background-position: left;
+
+    @include max-media-query($mobile-large) {
+        @include main-image('/images/home/background-mobile.png');
+    }
 }
 
 .home-mission {
