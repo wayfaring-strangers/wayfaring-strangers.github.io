@@ -1,5 +1,9 @@
 .contact {
-    @include main-image('/images/contact/customs-house.jpg');
+    @include main-image('/images/contact/background.png');
+
+    @include max-media-query($tablet-small) {
+        @include main-image('/images/contact/background-mobile.png');
+    }
 }
 
 .contact-header {
@@ -17,7 +21,7 @@
 
 .contact-wrapper {
     position: relative;
-    top: 30%;
+    top: 50%;
     left: 15%;
 
     @include max-media-query($mobile-large) {
@@ -26,23 +30,26 @@
 }
 
 .contact-content {
-    background: rgba(248,248,255,0.8);
-    color: $black;
+    background: rgba(0,0,0,0.7);
+    color: white;
     display: inline-block;
     padding: $spacing-unit * 2;
-    max-width: 500px;
+    width: 500px;
     margin-top: $spacing-unit * 4;
 
     @include max-media-query($mobile-large) {
         margin-top: $spacing-unit;
+        width: 300px;
     }
 }
 
-.contact-info-header {
-    font-family: $cursive-font;
-    font-style: italic;
+.contact-col-header {
+    padding-bottom: 10px;
+}
+
+.contact-header {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 2em;
 }
 
 .contact-info {
@@ -53,9 +60,10 @@
 .contact-col {
     @extend .col-md-6;
 
-    &:first-child {
+    &:last-child {
         @include min-media-query($tablet-large) {
-            border-right: 1px solid $black;
+            border-left: 1px solid white;
+            padding-left: 30px;
         }
     }
 }
