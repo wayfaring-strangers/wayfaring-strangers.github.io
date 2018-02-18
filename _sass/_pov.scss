@@ -69,7 +69,8 @@
 
 .pov-content-mobile {
     display: none;
-    background: $yellow;
+    background: $orange;
+    color: white;
     padding: $spacing-unit * 2;
     padding-top: 0;
 }
@@ -93,11 +94,16 @@
     }
 }
 
+.pov--read-more-ico {
+    color: white;
+    padding-left: $spacing-unit * 2;
+}
+
 .pov-read-more {
-    border: 2px solid grey;
+    border: 2px solid white;
     display: inline-block;
     padding: 2px;
-    color: grey;
+    color: white;
     margin-left: 40%;
     cursor: pointer;
 
