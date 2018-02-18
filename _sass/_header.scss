@@ -7,31 +7,41 @@
 }
 
 .logo-wrapper {
-    @extend .col-md-2;
     @extend .col-xs-3;
 
     padding-left: 0;
-    min-width: 150px;
+    min-width: 250px;
+    width: 20%;
+
+    @include max-media-query($desktop-med) {
+        width: 25%
+    }
+
+    @include max-media-query($desktop-small) {
+        width: 30%
+    }
 
     img {
         max-height: 100%;
 
         @include max-media-query($tablet-large) {
+            padding-left: 50px;
             height: $header-height - $spacing-unit * 2;
         }
     }
 }
 
 .site-menu {
-    @extend .col-md-10;
-    @extend .col-xs-9;
+
     height: $header-height;
-    padding: 0;
+    margin-top: 0;
+    position: absolute;
+    left: 250px;
 
     @include max-media-query($tablet-large) {
+        left: 0;
         width: 100%;
-        margin-top: 0;
-  }
+    }
 }
 
 .hamburger {
@@ -89,7 +99,7 @@
 
         li {
             display: inline-block;
-            padding-top: $spacing-unit * 3.5;
+            padding-top: $spacing-unit * 2.5;
             padding-left: $spacing-unit * 2;
             font-size: 1.5em;
 
@@ -132,7 +142,6 @@
         position: absolute;
         width: 100%;
         background: black;
-        display: none;
 
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;

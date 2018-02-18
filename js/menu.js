@@ -52,7 +52,7 @@
         if(mq.matches) {
             menu.css('height', browserHeight);
         } else {
-            menu.css('height', '100px');
+            menu.css('height', '80px');
         }
     }
 })();

@@ -1,7 +1,7 @@
 @mixin hamburger($bg) {
     width: 49px;
     height: 30px;
-    top: 35px;
+    top: 25px;
     left: 10px;
     background: url($bg);
     background-repeat: no-repeat;
@@ -11,8 +11,8 @@
     z-index: $z-index-header;
 
     @include max-media-query($tablet-large) {
-        top: -45px;
-        left: 150px;
+        top: 15px;
+        left: 10px;
     }
 }
 
