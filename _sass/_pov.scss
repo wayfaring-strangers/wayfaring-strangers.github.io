@@ -29,9 +29,10 @@
     @extend .col-md-8;
     @extend .col-md-offset-4;
 
-    background: $yellow;
+    background: $orange;
     padding: $spacing-unit;
     vertical-align: middle;
+    color: white;
 }
 
 .pov-header {
