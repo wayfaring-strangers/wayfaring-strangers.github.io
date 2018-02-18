@@ -96,7 +96,8 @@
 
 
 .services--header {
-    background: $yellow;
+    background: $orange;
+    color: white;
     padding: $spacing-unit;
     font-size: 3.5em;
 
@@ -132,9 +133,7 @@
 }
 
 .services--reality-text {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px;
+    margin-left: 35px;
 }
 
 .services--vr,
@@ -156,7 +155,7 @@
     font-size: 1.2em;
 
     li {
-        color: $yellow;
+        color: $orange;
         padding-top: 10px;
 
         p {
