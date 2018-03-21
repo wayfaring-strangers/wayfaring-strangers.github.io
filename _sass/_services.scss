@@ -45,7 +45,7 @@
 }
 
 .read-more-ico {
-    color: white;
+    color: $light-grey;
     padding-left: $spacing-unit * 2;
 }
 //
@@ -98,7 +98,7 @@
 .services--header {
     background: $orange;
     color: white;
-    padding: $spacing-unit;
+    padding: $spacing-unit $spacing-unit * 3;
     font-size: 3.5em;
 
     @include max-media-query($tablet-large) {
