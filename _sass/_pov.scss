@@ -1,27 +1,9 @@
 .pov {
-    @include main-image('/images/pov/POVDesktop.jpg');
+    @include main-image('/images/pov/POVbg.png');
     position: relative;
 
     @include max-media-query($tablet-large) {
-        @include main-image('/images/pov/POVbackgroundtall.jpg');
-    }
-}
-
-.pov-quote {
-    font-family: $cursive-font;
-    font-style: italic;
-    color: white;
-    font-size: 2.5em;
-    padding: $spacing-unit * 2;
-    line-height: 1em;
-    position: relative;
-    right: 10%;
-    text-align: right;
-
-    @include max-media-query($tablet-large) {
-        text-align: left;
-        right: 0;
-        font-size: 2em;
+        @include main-image('/images/pov/POVbgmobile.png');
     }
 }
 
@@ -29,10 +11,10 @@
     @extend .col-md-8;
     @extend .col-md-offset-4;
 
-    background: $orange;
+    background: $black;
     padding: $spacing-unit;
     vertical-align: middle;
-    color: white;
+    color: $light-grey;
 }
 
 .pov-header {
@@ -69,8 +51,8 @@
 
 .pov-content-mobile {
     display: none;
-    background: $orange;
-    color: white;
+    background: $black;
+    color: $light-grey;
     padding: $spacing-unit * 2;
     padding-top: 0;
 }
@@ -91,11 +73,12 @@
     @include max-media-query($tablet-small) {
         top: initial;
         bottom: 0;
+        width: 100%;
     }
 }
 
 .pov--read-more-ico {
-    color: white;
+    color: $light-grey;
     padding-left: $spacing-unit * 2;
 }
 
@@ -103,7 +86,7 @@
     border: 2px solid white;
     display: inline-block;
     padding: 2px;
-    color: white;
+    color: $light-grey;
     margin-left: 40%;
     cursor: pointer;
 

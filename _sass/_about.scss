@@ -1,5 +1,5 @@
 .about {
-    background: white;
+    background: $bg-grey;
     position: relative;
 }
 
@@ -28,9 +28,9 @@
 }
 
 .about-content-box {
-    background: $orange;
+    background: $black;
     padding: $spacing-unit * 2;
-    color: white;
+    color: #F2F2F2;
     font-weight: 700;
     margin-bottom: $spacing-unit * 4;
     margin-top: $spacing-unit * 2;

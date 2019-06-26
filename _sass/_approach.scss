@@ -1,6 +1,5 @@
 .approach {
-    background: white;
-    border-bottom: 20px solid $blue;
+    background: $black;
 }
 
 .approach-wrapper {
@@ -31,11 +30,11 @@
     @extend .col-md-5;
     @extend .col-md-offset-1;
 
+    color: $light-grey
 }
 
 .approach-content-header {
-    color: $light-grey;
-    opacity: 0.4;
+    color: $white;
     font-size: 2.5em;
     text-align: center;
     line-height: 1em;
@@ -46,7 +45,7 @@
 .approach-content-second,
 .approach-content-third {
     padding-top: $spacing-unit * 2;
-    border-top: 1px solid black;
+    border-top: 1px solid $light-grey;
     padding-bottom: $spacing-unit;
 }
 
@@ -63,7 +62,6 @@
 
 .approach-content-third {
     color: $light-grey;
-    opacity: 0.8;
     font-size: 1.3em;
     text-align: center;
 }

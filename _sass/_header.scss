@@ -1,20 +1,26 @@
 .site-header {
-    height: $header-height;
+    height: $lg-header-height;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: $z-index-header;
+
+    @include max-media-query($tablet-large) {
+      height: $sm-header-height;
+    }
 }
 
 .logo-wrapper {
     @extend .col-xs-3;
 
-    padding-left: 0;
-    min-width: 250px;
-    width: 20%;
+    padding: 10px;
+    // min-width: 250px;
+    width: 15%;
 
     @include max-media-query($desktop-med) {
-        width: 25%
+        width: 25%;
+        max-width: 250px;
+        min-width: 200px;
     }
 
     @include max-media-query($desktop-small) {
@@ -23,22 +29,24 @@
 
     img {
         max-height: 100%;
+        height: $lg-header-height - $spacing-unit * 2;
 
         @include max-media-query($tablet-large) {
             padding-left: 50px;
-            height: $header-height - $spacing-unit * 2;
+            height: $sm-header-height - $spacing-unit * 2;
         }
     }
 }
 
 .site-menu {
 
-    height: $header-height;
+    height: $lg-header-height;
     margin-top: 0;
     position: absolute;
     left: 250px;
 
     @include max-media-query($tablet-large) {
+        height: $sm-header-height;
         left: 0;
         width: 100%;
     }
@@ -138,7 +146,7 @@
 .mobile-menu-block {
     @include max-media-query($tablet-large) {
         position: absolute;
-        height: 61px;
+        height: $sm-header-height;
         position: absolute;
         width: 100%;
         background: black;

@@ -24,4 +24,15 @@
         $(config.povMoreContent).fadeIn();
         $(config.povIntroContent).fadeOut();
     });
+
+    $(window).resize(function() {
+      var windowWidth = $(window).width()
+      if (windowWidth < 768) {
+        $(config.povMoreContent).fadeOut();
+        $(config.povIntroContent).fadeIn();
+      } else {
+        $(config.povMoreContent).fadeOut();
+        $(config.povIntroContent).fadeOut();
+      }
+    })
 })();

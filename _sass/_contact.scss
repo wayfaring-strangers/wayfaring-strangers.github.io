@@ -1,8 +1,8 @@
 .contact {
-    @include main-image('/images/contact/background.png');
+    @include main-image('/images/contact/Contactbkgd.png');
 
     @include max-media-query($tablet-small) {
-        @include main-image('/images/contact/background-mobile.png');
+        @include main-image('/images/contact/ContactMobileBkgrnd.png');
     }
 }
 

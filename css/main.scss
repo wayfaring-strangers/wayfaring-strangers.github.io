@@ -3,19 +3,22 @@
 @charset "utf-8";
 
 // Our variables
-$header-height:    80px;
+$lg-header-height:    80px;
+$sm-header-height:    60px;
+$white:            #FFFFFF;
 $yellow:           #DBCA00;
 $orange:           #F27400;
-$black:            black;
+$black:            #000000;
 $light-yellow:     #FFEB00;
 $grey:             #DDDCE2;
 $contact-yellow:   #EEFF2D;
 $dark-grey:        #758895;
-$light-grey:       #88858B;
+$light-grey:       #F2F2F2;
 $pink:             #E15888;
 $header-l-grey:    #DDDDBB;
 $header-d-grey:    #63656E;
 $blue:             #28A5D4;
+$bg-grey:          #262626;
 $cursive-font:     'PT serif', serif;
 $main-font:        'Karla', sans-serif;
 $spacing-unit:     10px;

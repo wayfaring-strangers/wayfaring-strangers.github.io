@@ -122,6 +122,8 @@ h4 {
 }
 
 .scroll-arrow {
+  // TODO: not scrolling to anywhere - needs to scroll to next page ??? demo on codepen
+  display: none;
     background: url('/images/arrow.png') no-repeat;
     background-size: contain;
     height: 20px;
